@@ -38,11 +38,6 @@ void hook(HWND hWnd)
 	wndproc = WNDPROC(GetWindowLongPtrW(hWnd, GWLP_WNDPROC));
 	SetWindowLongPtrW(hWnd, GWLP_WNDPROC, LONG_PTR(WindowProc));
 }
-UINT CALLBACK ThreadProc(void* pv)
-{
-	return EXIT_SUCCESS;
-}
-HANDLE hThread;
 INT_PTR CALLBACK DialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg) {
